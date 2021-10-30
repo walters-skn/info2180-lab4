@@ -1,0 +1,55 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    background-color: beige;
+}
+
+.header{
+    background-color:purple;
+    color: beige;
+    font-size: 18px;
+    padding-top:2%;
+    padding-bottom: 1%;
+    text-align:center;
+}
+
+h2{
+    color: purple;
+    padding-left: 25%;
+}
+
+.header img{
+    border-radius: 5%;
+    height: 250px;
+    width: 22%;
+}
+input{
+    height:50px;
+    width: 45%;
+    border-radius: .55rem;
+} 
+
+.information{
+    padding-left: 25%;
+}
+
+button{
+    background-color:purple;
+    color:azure;
+    font-size: 20px;
+    width:20%;
+    height: 55px;
+    border-radius: .25rem;
+    padding: .365rem .75rem;
+    border-radius: .55rem;
+}
+
+footer{
+    background-color: purple;
+    font-size: 25px;
+    color:beige;
+    height: 50px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    text-align:center;
+}
