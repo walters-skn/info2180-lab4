@@ -1,11 +1,12 @@
 window.onload=function(){
-	var search = document.getElementsByClassName('btn')[0];
-	var url = "http://localhost:8888/info2180-lab4/superheroes.php";
+	let search = document.getElementsByClassName('btn')[0];
+	var url = "http://localhost:8888/info2180-lab4/superheroes.php?query=";
 
 	search.addEventListener("click", function(e){
 		e.preventDefault();
-        let req = new XMLHttpRequest();
-		
+        var req = new XMLHttpRequest();
+		var s = document.getElementById("search").value;
+
 		req.onreadystatechange = function(){
 			if (req.readyState == XMLHttpRequest.DONE) {
 				if (req.status == 200){	
@@ -13,12 +14,12 @@ window.onload=function(){
                     var result = document.getElementById('results')
 					result.innerHTML= response;
 				}else{
-                    // var error= document.getElementById('results')
-					console.log("There was a problem with the request.");
+					alert("There was a problem with the request.");
 				}
 			}
 		}
-		req.open('GET',url);
+		console.log(s);
+		req.open('GET',url+s, true);
 		req.send();
 	});
-}	
+}
