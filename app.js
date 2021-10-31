@@ -10,9 +10,11 @@ window.onload=function(){
 			if (req.readyState == XMLHttpRequest.DONE) {
 				if (req.status == 200){	
 					var response = req.responseText;
-					alert(response)
+                    var result = document.getElementById('results')
+					result.innerHTML= response;
 				}else{
-					alert("There was a problem with the request.");
+                    // var error= document.getElementById('results')
+					console.log("There was a problem with the request.");
 				}
 			}
 		}
